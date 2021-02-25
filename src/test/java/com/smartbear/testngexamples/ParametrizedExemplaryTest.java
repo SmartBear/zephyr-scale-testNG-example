@@ -19,14 +19,20 @@ public class ParametrizedExemplaryTest {
     }
 
     @Test(dataProvider = "peopleDataProvider")
-    public void parametrizedTest(String name, Integer age) {
+    public void DEV_T30_parametrizedTest(String name, Integer age) {
         assertThat(name).isNotBlank();
         assertThat(age).isPositive();
     }
 
     @Ignore
     @Test(dataProvider = "peopleDataProvider")
-    public void ignoredParametrizedTest(String name, Integer age) {
+    public void DEV_T31_ignoredParametrizedTest(String name, Integer age) {
+        assertThat(name).isNotBlank();
+        assertThat(age).isPositive();
+    }
+
+    @Test(dataProvider = "peopleDataProvider", dependsOnMethods = {"DEV_T30_parametrizedTest"} )
+    public void DEV_T32_ignoredParametrizedTest(String name, Integer age) {
         assertThat(name).isNotBlank();
         assertThat(age).isPositive();
     }
