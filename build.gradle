@@ -12,7 +12,8 @@ repositories {
 test {
     useTestNG()
     options {
-        listeners << 'org.testng.reporters.JUnitXMLReporter'
+        useDefaultListeners = false
+        listeners = ['org.testng.reporters.JUnitXMLReporter']
     }
 }
 
