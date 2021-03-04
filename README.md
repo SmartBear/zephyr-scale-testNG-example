@@ -13,3 +13,8 @@ To enable TestNG format, it might be necessary to add `org.testng.reporters.XMLR
 - A test that depends on a failing tests (e.g. `@Test(dependsOnMethods = {"DEV_T21_testMethod3"})`) is considered skipped (opposed to `@Ignore` annotation) and test case linked to such test will have Skipped (if custom status present) or Blocked status.
 - Each testing class (without `@Ignore` annotation) results in one output file in JUnit xml format in `build/test-results/test`.
 - Output files can be sent separately or zipped together, using `/automations/executions/junit` endpoint.
+
+
+### Execute tests in the example
+In order to execute tests in the example on your local machine you’ll have to checkout this repository and install java 8 or above. 
+To use the code example, simply run `./gradlew test` in the root folder from the terminal or run gradle task `test` from your IDE.
