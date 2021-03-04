@@ -37,4 +37,10 @@ public class ParametrizedExemplaryTest {
         assertThat(age).isPositive();
     }
 
+    @Test(dataProvider = "peopleDataProvider")
+    public void parametrizedTestMatchedByName(String name, Integer age) {
+        assertThat(name).isNotBlank();
+        assertThat(age).isPositive();
+    }
+
 }

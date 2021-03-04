@@ -2,18 +2,18 @@
 <testng-results skipped="2" failed="3" ignored="4" total="13" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Gradle suite" duration-ms="65" started-at="2021-03-04T10:22:38 CET" finished-at="2021-03-04T10:22:38 CET">
+  <suite name="Gradle suite" duration-ms="72" started-at="2021-03-04T10:24:59 CET" finished-at="2021-03-04T10:24:59 CET">
     <groups>
       <group name="group-2">
-        <method signature="ExemplaryTest.DEV_T19_testMethod1()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@36ad3570]" name="DEV_T19_testMethod1" class="com.smartbear.testngexamples.ExemplaryTest"/>
+        <method signature="ExemplaryTest.DEV_T19_testMethod1()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@30fb9bdb]" name="DEV_T19_testMethod1" class="com.smartbear.testngexamples.ExemplaryTest"/>
       </group> <!-- group-2 -->
       <group name="group-1">
-        <method signature="ExemplaryTest.DEV_T19_testMethod1()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@36ad3570]" name="DEV_T19_testMethod1" class="com.smartbear.testngexamples.ExemplaryTest"/>
+        <method signature="ExemplaryTest.DEV_T19_testMethod1()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@30fb9bdb]" name="DEV_T19_testMethod1" class="com.smartbear.testngexamples.ExemplaryTest"/>
       </group> <!-- group-1 -->
     </groups>
-    <test name="Gradle test" duration-ms="65" started-at="2021-03-04T10:22:38 CET" finished-at="2021-03-04T10:22:38 CET">
+    <test name="Gradle test" duration-ms="72" started-at="2021-03-04T10:24:59 CET" finished-at="2021-03-04T10:24:59 CET">
       <class name="com.smartbear.testngexamples.ParametrizedExemplaryTest">
-        <test-method status="PASS" signature="DEV_T30_parametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@1fe09179]" name="DEV_T30_parametrizedTest" duration-ms="5" started-at="2021-03-04T10:22:38 CET" data-provider="peopleDataProvider" finished-at="2021-03-04T10:22:38 CET">
+        <test-method status="PASS" signature="DEV_T30_parametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@2bde6988]" name="DEV_T30_parametrizedTest" duration-ms="6" started-at="2021-03-04T10:24:59 CET" data-provider="peopleDataProvider" finished-at="2021-03-04T10:24:59 CET">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DEV_T30_parametrizedTest -->
-        <test-method status="FAIL" signature="DEV_T30_parametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@1fe09179]" name="DEV_T30_parametrizedTest" duration-ms="2" started-at="2021-03-04T10:22:38 CET" data-provider="peopleDataProvider" finished-at="2021-03-04T10:22:38 CET">
+        <test-method status="FAIL" signature="DEV_T30_parametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@2bde6988]" name="DEV_T30_parametrizedTest" duration-ms="3" started-at="2021-03-04T10:24:59 CET" data-provider="peopleDataProvider" finished-at="2021-03-04T10:24:59 CET">
           <params>
             <param index="0">
               <value>
@@ -48,7 +48,7 @@
 Expecting not blank but was:<"">]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 
+              <![CDATA[java.lang.AssertionError:
 Expecting not blank but was:<"">
 at com.smartbear.testngexamples.ParametrizedExemplaryTest.DEV_T30_parametrizedTest(ParametrizedExemplaryTest.java:23)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -110,23 +110,7 @@ at java.lang.Thread.run(Thread.java:748)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DEV_T30_parametrizedTest -->
-        <test-method status="PASS" signature="DEV_T30_parametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@1fe09179]" name="DEV_T30_parametrizedTest" duration-ms="0" started-at="2021-03-04T10:22:38 CET" data-provider="peopleDataProvider" finished-at="2021-03-04T10:22:38 CET">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Anne]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[37]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DEV_T30_parametrizedTest -->
-        <test-method status="FAIL" signature="DEV_T30_parametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@1fe09179]" name="DEV_T30_parametrizedTest" duration-ms="0" started-at="2021-03-04T10:22:38 CET" data-provider="peopleDataProvider" finished-at="2021-03-04T10:22:38 CET">
+        <test-method status="FAIL" signature="DEV_T30_parametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@2bde6988]" name="DEV_T30_parametrizedTest" duration-ms="1" started-at="2021-03-04T10:24:59 CET" data-provider="peopleDataProvider" finished-at="2021-03-04T10:24:59 CET">
           <params>
             <param index="0">
               <value>
@@ -148,11 +132,11 @@ to be greater than:
  <0> ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 
+              <![CDATA[java.lang.AssertionError:
 Expecting:
  <-15>
 to be greater than:
- <0> 
+ <0>
 at com.smartbear.testngexamples.ParametrizedExemplaryTest.DEV_T30_parametrizedTest(ParametrizedExemplaryTest.java:24)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -213,13 +197,29 @@ at java.lang.Thread.run(Thread.java:748)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DEV_T30_parametrizedTest -->
-        <test-method status="SKIP" signature="DEV_T32_ignoredParametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@1fe09179]" name="DEV_T32_ignoredParametrizedTest" duration-ms="0" started-at="2021-03-04T10:22:38 CET" data-provider="peopleDataProvider" depends-on-methods="com.smartbear.testngexamples.ParametrizedExemplaryTest.DEV_T30_parametrizedTest" finished-at="2021-03-04T10:22:38 CET">
+        <test-method status="PASS" signature="DEV_T30_parametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@2bde6988]" name="DEV_T30_parametrizedTest" duration-ms="0" started-at="2021-03-04T10:24:59 CET" data-provider="peopleDataProvider" finished-at="2021-03-04T10:24:59 CET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Anne]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[37]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DEV_T30_parametrizedTest -->
+        <test-method status="SKIP" signature="DEV_T32_ignoredParametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@2bde6988]" name="DEV_T32_ignoredParametrizedTest" duration-ms="0" started-at="2021-03-04T10:24:59 CET" data-provider="peopleDataProvider" depends-on-methods="com.smartbear.testngexamples.ParametrizedExemplaryTest.DEV_T30_parametrizedTest" finished-at="2021-03-04T10:24:59 CET">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method ParametrizedExemplaryTest.DEV_T32_ignoredParametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@1fe09179] depends on not successfully finished methods]]>
+              <![CDATA[Method ParametrizedExemplaryTest.DEV_T32_ignoredParametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@2bde6988] depends on not successfully finished methods]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method ParametrizedExemplaryTest.DEV_T32_ignoredParametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@1fe09179] depends on not successfully finished methods
+              <![CDATA[java.lang.Throwable: Method ParametrizedExemplaryTest.DEV_T32_ignoredParametrizedTest(java.lang.String, java.lang.Integer)[pri:0, instance:com.smartbear.testngexamples.ParametrizedExemplaryTest@2bde6988] depends on not successfully finished methods
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -272,11 +272,11 @@ at java.lang.Thread.run(Thread.java:748)
         </test-method> <!-- DEV_T32_ignoredParametrizedTest -->
       </class> <!-- com.smartbear.testngexamples.ParametrizedExemplaryTest -->
       <class name="com.smartbear.testngexamples.ExemplaryTest">
-        <test-method status="PASS" signature="DEV_T19_testMethod1()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@36ad3570]" name="DEV_T19_testMethod1" duration-ms="31" started-at="2021-03-04T10:22:38 CET" finished-at="2021-03-04T10:22:38 CET">
+        <test-method status="PASS" signature="DEV_T19_testMethod1()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@30fb9bdb]" name="DEV_T19_testMethod1" duration-ms="36" started-at="2021-03-04T10:24:59 CET" finished-at="2021-03-04T10:24:59 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DEV_T19_testMethod1 -->
-        <test-method status="FAIL" signature="DEV_T21_testMethod3()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@36ad3570]" name="DEV_T21_testMethod3" duration-ms="1" started-at="2021-03-04T10:22:38 CET" finished-at="2021-03-04T10:22:38 CET">
+        <test-method status="FAIL" signature="DEV_T21_testMethod3()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@30fb9bdb]" name="DEV_T21_testMethod3" duration-ms="1" started-at="2021-03-04T10:24:59 CET" finished-at="2021-03-04T10:24:59 CET">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[failing test]]>
@@ -343,17 +343,17 @@ at java.lang.Thread.run(Thread.java:748)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DEV_T21_testMethod3 -->
-        <test-method status="PASS" signature="DEV_T20_testMethod2()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@36ad3570]" name="DEV_T20_testMethod2" duration-ms="1" started-at="2021-03-04T10:22:38 CET" depends-on-methods="com.smartbear.testngexamples.ExemplaryTest.DEV_T19_testMethod1" finished-at="2021-03-04T10:22:38 CET">
+        <test-method status="PASS" signature="DEV_T20_testMethod2()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@30fb9bdb]" name="DEV_T20_testMethod2" duration-ms="0" started-at="2021-03-04T10:24:59 CET" depends-on-methods="com.smartbear.testngexamples.ExemplaryTest.DEV_T19_testMethod1" finished-at="2021-03-04T10:24:59 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DEV_T20_testMethod2 -->
-        <test-method status="SKIP" signature="DEV_T22_testMethod4()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@36ad3570]" name="DEV_T22_testMethod4" duration-ms="0" started-at="2021-03-04T10:22:38 CET" depends-on-methods="com.smartbear.testngexamples.ExemplaryTest.DEV_T21_testMethod3" finished-at="2021-03-04T10:22:38 CET">
+        <test-method status="SKIP" signature="DEV_T22_testMethod4()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@30fb9bdb]" name="DEV_T22_testMethod4" duration-ms="0" started-at="2021-03-04T10:24:59 CET" depends-on-methods="com.smartbear.testngexamples.ExemplaryTest.DEV_T21_testMethod3" finished-at="2021-03-04T10:24:59 CET">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method ExemplaryTest.DEV_T22_testMethod4()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@36ad3570] depends on not successfully finished methods]]>
+              <![CDATA[Method ExemplaryTest.DEV_T22_testMethod4()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@30fb9bdb] depends on not successfully finished methods]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method ExemplaryTest.DEV_T22_testMethod4()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@36ad3570] depends on not successfully finished methods
+              <![CDATA[java.lang.Throwable: Method ExemplaryTest.DEV_T22_testMethod4()[pri:0, instance:com.smartbear.testngexamples.ExemplaryTest@30fb9bdb] depends on not successfully finished methods
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)

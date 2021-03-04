@@ -14,6 +14,30 @@ To enable TestNG format, it might be necessary to add `org.testng.reporters.XMLR
 - Each testing class (without `@Ignore` annotation) results in one output file in JUnit xml format in `build/test-results/test`.
 - Output files can be sent separately or zipped together, using `/automations/executions/junit` endpoint.
 
+### Naming conventions
+Test cases in Zephyr Scale will be matched by the full class name and test name or test case key if a method starts or ends with it, see the example below:
+```
+public class ExemplaryTest {
+
+    // will match test case with key DEV-T19
+    @Test(groups = { "group-1", "group-2" })
+    public void DEV_T19_testMethod1() {
+        assertThat(true).isTrue();
+    }
+
+    // will match test case with key DEV-T21
+    @Test()
+    public void testMethod3_DEV_T21() {
+        fail("failing test");
+    }
+
+    // will match test case named com.smartbear.testngexamples.ExemplaryTest.testMethod4
+    @Test(dependsOnMethods = {"testMethod3_DEV_T21"})
+    public void testMethod4() {
+        assertThat(true).isTrue();
+    }
+}
+```
 
 ### Execute tests in the example
 In order to execute tests in the example on your local machine you’ll have to checkout this repository and install java 8 or above. 
