@@ -20,5 +20,4 @@ test {
 dependencies {
     testCompile group: 'org.testng', name: 'testng', version: '7.3.0'
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
-
 }
