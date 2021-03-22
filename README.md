@@ -1,6 +1,6 @@
 # Zephyr Scale and TestNG integration 
 
-This is an example project that demonstrates how to configrue Robot Framework to generate the JUnit XML results file required for uploading test results to Zephyr Scale using the API [`POST /automations/executions/junit`](https://support.smartbear.com/zephyr-scale-cloud/api-docs/#operation/createJUnitExecutions).
+This is an example project that demonstrates how to configrue TestNG to generate the JUnit XML results file required for uploading test results to Zephyr Scale using the API [`POST /automations/executions/junit`](https://support.smartbear.com/zephyr-scale-cloud/api-docs/#operation/createJUnitExecutions).
 
 ## Configuration
 
