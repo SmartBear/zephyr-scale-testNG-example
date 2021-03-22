@@ -1,14 +1,14 @@
-# The exemplary configuration of TestNG library to use its output in Zephyr Scale 
+# Zephyr Scale and TestNG integration 
 
-This is an example how to configure testNG library to generate output file that could be used as input for `/automations/executions/junit` endpoint.
+This is an example project that demonstrates how to configrue TestNG to generate the JUnit XML results file required for uploading test results to Zephyr Scale using the API [`POST /automations/executions/junit`](https://support.smartbear.com/zephyr-scale-cloud/api-docs/#operation/createJUnitExecutions).
 
-### Configuration 
-TestNG supports JUnit format by default.
-In case the default listeners provided by the TestNG library are disabled (e.g. `useDefaultListeners = false` in gradle configuration), it might be necessary to include the `JUnitXMLReporter` in the listeners (e.g. `listeners = ['org.testng.reporters.JUnitXMLReporter']` in gradle).
-The `JUnitXMLReporter` is provided by the TestNG library and enabled by default, so there is no need to declare it explicitly when no custom configuration is set.  
-To enable TestNG format, it might be necessary to add `org.testng.reporters.XMLReporter` to the listeners used in case default listeners are disabled.
+## Configuration
 
-#### Gradle
+No configuration is required beforehand. TestNG already supports JUnit format by default.
+
+In case the default listeners provided by the TestNG library are disabled, it might be necessary to add `org.testng.reporters.XMLReporter` to the listeners used in case default listeners are disabled. Find below how to configure this listener for Gradle and Maven.
+
+### Gradle
 
 ```
 test {
@@ -20,10 +20,8 @@ test {
 }
 
 ```
-To include XMLReporter:
-`listeners = [..., 'org.testng.reporters.XMLReporter']`
 
-#### Maven
+### Maven
 ```
 <build>
     <plugins>
@@ -49,14 +47,20 @@ To include XMLReporter:
     </plugins>
 </build>
 ```
-#### There are a few noteworthy points:
-- Tests and classes marked with `@Ignore` annotation are not taken into consideration by the framework when it comes to generating output file - as a result, the test cases linked to those tests won't be present in the test cycle created by the endpoint. 
-- A test that depends on a failing tests (e.g. `@Test(dependsOnMethods = {"DEV_T21_testMethod3"})`) is considered skipped (opposed to `@Ignore` annotation) and test case linked to such test will have Skipped (if custom status present) or Blocked status.
-- Each testing class (without `@Ignore` annotation) results in one output file in JUnit xml format in `build/test-results/test`.
-- Output files can be sent separately or zipped together, using `/automations/executions/junit` endpoint.
 
-### Naming conventions
-Test cases in Zephyr Scale will be matched by the full class name and test name or test case key if a method starts or ends with it, see the example below:
+## Executing tests and uploading results to Zephyr Scale
+To execute tests using this example project all that is required is to use Gradle in the root folder from the terminal:
+
+`./gradlew test`
+
+...or run the Gradle task `test` from your IDE.
+
+The command above will execute the TestNG tests and generate a JUnit XML results file. Then, this file containing the test results can be uploaded to Zephyr Scale using the following API endpoint: [`POST /automations/executions/junit`](https://support.smartbear.com/zephyr-scale-cloud/api-docs/#operation/createJUnitExecutions).
+
+The abovementioned API accepts either a single XML file as well as a .zip file containing multiple XML files. The POST request will create a new test cycle in Zephyr Scale containing the results and will respond with the key of the created test cycle.
+
+## Naming conventions
+Test cases in Zephyr Scale will be matched by the full class name and test name or test case key if a method starts or ends with it. Find below an example:
 ```
 public class ExemplaryTest {
 
@@ -80,6 +84,14 @@ public class ExemplaryTest {
 }
 ```
 
-### Execute tests in the example
+## Requirements to run this example project
 In order to execute tests in the example on your local machine you’ll have to checkout this repository and install java 8 or above. 
-To use the code example, simply run `./gradlew test` in the root folder from the terminal or run gradle task `test` from your IDE.
+
+## Considerations:
+- Tests and classes marked with `@Ignore` annotation are not taken into consideration by the framework when it comes to generating output file - as a result, the test cases linked to those tests won't be present in the test cycle created by the endpoint. 
+- Tests that depends on a failing tests (e.g. `@Test(dependsOnMethods = {"DEV_T21_testMethod3"})`) is considered skipped and Zephyr Scale test cases linked to such tests will have status Skipped (if custom status present) or Blocked.
+- Each test class results in one output file in JUnit xml format in `build/test-results/test` (unless the `@Ignore` annotation is present).
+
+## More information
+
+For more information, please head to our [documentation page](https://support.smartbear.com/zephyr-scale) or get in [touch with us](https://smartbear.atlassian.net/servicedesk/) if you have any issues or need help.
